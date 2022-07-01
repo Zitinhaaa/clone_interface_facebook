@@ -1,0 +1,270 @@
+/*Zerar as pré configurações que ja vem automatico*/
+
+*{
+    margin: 0;  /*Espaçamento externo*/
+    padding: 0; /*espaçamento interno*/
+    box-sizing: border-box;
+}
+
+body{
+    font-family: helvetica;
+    background-color: #F0F2F5;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.container{
+    padding-top: 130px; /*ele vai deslocar pra baixo todo conteudo container*/
+    padding-bottom: 160px; /*do fomulário até onde acaba a cor de fundo azul*/
+    max-width: 980px; /*conteudo lado esquerdo até o formulário*/
+    margin: 0 auto; /*deixa todo conteudo no meio*/
+    display: grid; /*ele não funciona sozinho, precisa grid-template-columns*/
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.intro{
+    margin-bottom: 100px;
+}
+
+
+img{
+    display: block; /*deixa o objeto um embaixo do outro*/
+    margin-bottom: 30px;
+    height: 106px; /*altura da imagem*/
+    margin: -28px; /*ele vai alinhar com o h2*/
+   
+}
+
+h2{
+    
+    font-size: 28px;
+    font-weight: 400; /*peso da fonte, tirou o negrito forte dela*/
+    color: #1c1e21;
+    margin-top: 20px;
+    line-height: 32px;
+    max-width: 500px;
+}
+
+form{
+    display: block;
+    padding: 16px 16px 25px 16px;
+    background-color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%); /*sombra em volta do formulário*/
+    
+    
+}
+
+form a, input, button{
+    display: block;
+}
+
+form a{
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    color: #1877f2;
+    padding-bottom: 16px;
+    border-bottom:  1px solid #dadde1; /*lnha cinza no form abaixo do esqueceu a senha*/
+    margin-top: 16px;
+}
+
+form a:hover{
+    text-decoration: underline; /*quando passar no form a, ele ira por sublinhado embaixo*/
+}
+
+input{
+    width: 100%;
+    font-size: 17px;
+    margin-bottom: 15px; /*espaçamento de uma tela a outra*/
+    padding: 14px 16px;
+    border-radius: 6px;
+    border: 1px solid #dddfe2;
+    outline: none; /*tirando o contorno do input=tela*/
+}
+
+input:focus{
+    border-color: #1877f2;
+    box-shadow: 0 0 0 2px #e7f3ff;   /*sombra em volta do input=tela*/
+    caret-color: #1877f2; /*é a cor da barra que fica pisando até escrevermos dentro da tela*/
+}
+
+
+input[placeholder]{
+    font-size: 17px;
+}
+
+input::placeholder{
+    color: #1d2129;
+    opacity: 0.6;
+}
+
+.entrar{
+    font-size: 20px;
+    font-weight: bold; /*deixar a palavra em negrito*/
+    background-color: #1877F2;
+    color: #ffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer; /*deixar a mãozinha ao clicar ao invés de seta*/
+    width: 100%; /*largura da tela*/
+    padding: 10px 0;
+    transition: 200ms cubic-bezier(0.08,0.52,0.52,1);
+}
+
+.entrar:hover{
+    background-color: #166fe5;
+}
+
+.criar{
+    font-size: 17px;
+    font-weight: bold; /*deixar a palavra em negrito*/
+    background-color:#42b72a;
+    color: #ffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer; /*deixar a mãozinha ao clicar ao invés de seta*/
+    margin: 0 auto;
+    padding: 13px;
+    margin-top: 27px;
+    transition: 200ms cubic-bezier(0.08,0.52,0.52,1);
+}
+
+.criar:hover{
+    background-color: #36a420
+}
+
+p, p>a{
+    text-align:center;
+    color: #1c1e21;
+    font-size: 13px;
+    margin-top: 28px;
+}
+
+p > a{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+p > a:hover{
+  text-decoration: underline;
+}
+
+
+
+footer{
+  
+    background-color: #fff;
+    height: 250px;
+    color: #737373;
+    margin-left: -50px;
+    margin-right: -50px;
+    padding-top: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul, span{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 10px 0;
+    max-width: 990px; /*a largura max do conteudo footer*/
+    margin: 0 auto; /*deixar as informações do footer alinhados*/
+    align-items: baseline;
+}
+
+footer button{
+    background-color: #f5f6f7;
+    border: 1px solid #ccd0d5;
+    outline: none;
+    color: #4b4f56;
+    padding: 0 10px;
+    font-weight: 600;
+    font-size: 15px;
+    
+    
+}
+
+footer button:hover{
+    background-color: #ebedf0;
+}
+
+footer ul li{
+    font-size: 12px;
+    line-height: 18px; /*altura das linhas = paragrafo*/
+    padding-right: 15px; /*espaçamento de cada palavra da outra*/
+}
+
+
+footer ul li a{
+
+    font-family: helvetica;
+    text-decoration: none;
+    color:#8A8D91;
+    font-weight: 400;
+}
+
+
+footer ul li a:hover{
+    text-decoration: underline;
+}
+
+.linha{
+    max-width: 980px; /*a largura max da linha*/
+    margin: 0 auto;
+    border-bottom:  1px solid #dadde1; /*linha cinza*/
+}
+
+footer span{
+    
+    font-size: 11px;
+}
+
+
+/*RESPONSIVO*/
+
+@media (max-width: 900px) { 
+
+    .container{
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+    }
+
+    body{
+        margin: center;
+    }
+
+    img{
+        margin: -28px auto;
+    }
+
+    .intro{
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    h2{
+        width: 410px;
+    }
+
+    p{
+        text-align: center;
+    }
+
+    form{
+        max-width: 380px;
+        margin: 0 auto;
+    }
+
+    footer{
+     
+      text-align: center;
+      margin-left: -50px;
+      margin-right: -50px;
+      padding: 30px 30px;
+    }
+}
